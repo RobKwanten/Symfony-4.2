@@ -1,0 +1,32 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}Steden{% endblock %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Leuke plekken in Europa</h1>
+        <p>Tips voor citytrips voor vrolijke vakantiegangers!</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>{{ steden }}</p>
+
+            {% for stad in steden %}
+                {{ stad.cit.name }}
+
+                <!--<div class="col-sm-4">
+
+                    <h3>{{stad[cit_name]}}</h3>
+                    <a href="http://localhost:8000/steden/{{ stad.id }}">
+                        <img class="img-fluid" src='images/{{stad}}.jpg'>
+                    </a>
+                    <span class="breadcrumb black">Oeps de PDO</span>
+
+                </div>-->
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
